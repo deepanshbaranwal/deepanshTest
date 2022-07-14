@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="col-sm-6">
+                <div class="card" *ngIf="contents" style="width: 29rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" *ngFor="let content of contents" (click)="showContent(content)">{{content.title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="col-sm-6" *ngIf="text">
+                <p>{{text.id}}</p>
+                <p>{{text.title}}</p>
+                <p>{{text.desc}}</p>
+                <p>{{text.status}}</p>
+            </div>
+        </div>
+    </div>
+</div>
